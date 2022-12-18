@@ -1,0 +1,13 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "crawling_castles",
+    "name": "Crawling Castles",
+    "authors": [ "Grimlyssa" ],
+    "maintainers": [ "Grimlyssa" ],
+    "description": "Adding in giant robot parts for the perfect mobile fortress",
+    "category": "vehicle",
+    "dependencies": [ "dda" ],
+    "obsolete": false
+  }
+]
