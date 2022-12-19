@@ -1,203 +1,302 @@
 [
-  {
-    "type": "GENERIC",
-    "id": "cockpit",
-    "name": { "str": "cockpit" },
-    "description": "A simple cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
-    "weight": "10500 g",
-    "to_hit": -4,
-    "color": "red",
-    "symbol": "0",
-    "material": [ "plastic", "cotton", "steel" ],
-    "volume": "8500 ml",
-    "bashing": 6,
-    "category": "veh_parts",
-    "price": 75000,
-    "price_postapoc": 300
-  },
-  {
-    "type": "GENERIC",
-    "copy-from": "cockpit",
-    "id": "cockpit_racing",
-    "name": { "str": "leather seat" },
-    "description": "A lightweight cockpit designed for speed with a leather interior. It features a number of quick-flip switches and pedals.",
-    "material": [ "leather", "plastic", "aluminum" ],
-	"weight": "5500 ml",
-    "price": 90000,
-    "price_postapoc": 450
-  },
-  {
-    "type": "GENERIC",
-    "copy-from": "cockpit",
-    "id": "cockpit_expmtl",
-    "name": { "str": "experimental cockpit" },
-    "description": "A mail order experimental cockpit for hobbiest roboticists.It would seem futuristic if not for the cheap plastic buttons and exposed wires everywhere.",
-    "material": [ "plastic", "leather", "aluminum" ],
-	"weight": "8000 g",
-    "price": 50000,
-    "price_postapoc": 200
-  },
-  {
-    "type": "GENERIC",
-    "copy-from": "cockpit",
-    "id": "cockpit_military",
-    "name": { "str": "leather seat" },
-    "description": "A heavy-duty cockpit designed for prototype combat mechs. It has intergrated cranks and panels for controling weaponry.",
-    "material": [ "kevlar", "ceramic", "hardsteel" ],
-	"weight": "7000 ml",
-    "price": 95000,
-    "price_postapoc": 550
-  },
-  {
-    "entries": [
-      { "count": [ 1, 3 ], "item": "cotton_patchwork" },
-      { "count": [ 1, 3 ], "item": "pipe" },
-      { "count": [ 0, 2 ], "item": "spring" },
-      { "count": [ 3, 5 ], "item": "scrap" }
-	  { "count": [ 1, 3 ], "item": "e_scrap" },
-    ],
-    "id": "ig_vp_cockpit",
-    "subtype": "collection",
-    "type": "item_group"
-  },
-  {
-    "entries": [
-      { "count": [ 1, 5 ], "item": "leather" },
-      { "count": [ 1, 3 ], "item": "cotton_patchwork" },
-	  { "count": [ 1, 3 ], "item": "plastic_chunk" },
-      { "count": [ 0, 2 ], "item": "spring" },
-      { "count": [ 3, 5 ], "item": "scrap_aluminum" }
-	  { "count": [ 1, 3 ], "item": "e_scrap" },
-    ],
-    "id": "ig_vp_cockpit_light",
-    "subtype": "collection",
-    "type": "item_group"
-  },
-  {
-    "entries": [
-      { "count": [ 1, 5 ], "item": "steel_chunk" },
-      { "count": [ 1, 3 ], "item": "scrap_kevlar" },
-      { "count": [ 1, 3 ], "item": "pipe" },
-      { "count": [ 0, 2 ], "item": "spring" },
-      { "count": [ 3, 5 ], "item": "ceramic_shard" }
-	  { "count": [ 1, 3 ], "item": "e_scrap" },
-    ],
-    "id": "ig_vp_cockpit_heavy",
-    "subtype": "collection",
-    "type": "item_group"
-  },
-  {
-    "abstract": "cockpit_abstract",
-    "breaks_into": "ig_vp_cockpit",
-    "broken_color": "red",
-    "broken_symbol": "*",
-    "categories": [ "operations", "passengers" ],
-    "color": "red",
-    "comfort": 2,
-    "damage_modifier": 60,
-    "damage_reduction": { "all": 2, "bash": 5 },
-    "description": "A simple cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
-    "durability": 300,
-    "flags": [ "SEAT", "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "WINDSHIELD" ],
-    "floor_bedding_warmth": 200,
-    "item": "cockpit",
-    "location": "center",
-	"size": "12500 ml",
-    "looks_like": "reclining_seat",
-    "name": { "str": "cockpit" },
-    "requirements": {
-      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": {
-        "skills": [ [ "mechanics", 3 ] ],
-        "time": "60 m",
-        "using": [ [ "repair_welding_standard", 1 ], [ "sewing_standard", 8 ] ]
-      }
-  },
-  {
-    "abstract": "cockpit_light_abstract",
-    "breaks_into": "ig_vp_cockpit_light",
-    "broken_color": "red",
-    "broken_symbol": "*",
-    "categories": [ "operations", "passengers" ],
-    "color": "red",
-    "comfort": 3,
-    "damage_modifier": 60,
-    "damage_reduction": { "all": 2, "bash": 5 },
-    "description": "A light cockpit with twin sliding joysticks and an adjustable seat. It's filled with dials, buttons, and levers.",
-    "durability": 200,
-	"epower": -45,
-    "flags": [ "SEAT", "BED" "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "CTRL_ELECTRONIC", "DOME_LIGHT", "ENABLED_DRAINS_EPOWER", "WINDSHIELD" ],
-    "floor_bedding_warmth": 200,
-    "item": "cockpit_racing", "cockpit_expmtl"
-    "location": "center",
-    "looks_like": "reclining_seat",
-    "name": { "str": "light cockpit" },
-	"size": "6250 ml",
-    "requirements": {
-      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": {
-        "skills": [ [ "mechanics", 3 ] ],
-        "time": "60 m",
-        "using": [ [ "repair_welding_standard", 1 ], [ "sewing_standard", 8 ] ]
-      }
-  },
-  {
-    "abstract": "cockpit_racing_abstract",
-    "breaks_into": "ig_vp_cockpit_light",
-    "copy-from": "cockpit",
-    "item": "cockpit_racing",
-    "looks_like": "seat",
-	"size": "5000 ml",
-    "name": { "str": "racing cockpit" },
-    "type": "vehicle_part"
-  },
-  {
-    "abstract": "cockpit_expmtl_abstract",
-    "breaks_into": "ig_vp_seat_leather",
-    "copy-from": "seat",
-    "item": "cockpit_expmtl",
-    "looks_like": "seat",
-    "name": { "str": "experimental cockpit" },
-    "type": "vehicle_part"
-  },
-  {
-    "abstract": "cockpit_heavy_abstract",
-    "breaks_into": "ig_vp_cockpit_heavy",
-    "broken_color": "red",
-    "broken_symbol": "*",
-    "categories": [ "operations", "passengers" ],
-    "color": "red",
-    "comfort": 2,
-    "damage_modifier": 60,
-    "damage_reduction": { "all": 2, "bash": 5 },
-    "description": "A heavy cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
-    "durability": 500,
-	"epower": -350,
-    "flags": [ "SEAT", "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "DOME_LIGHT", "TURRET_CONTROLS", "ENABLED_DRAINS_EPOWER", "WINDSHIELD" ],
-    "floor_bedding_warmth": 200,
-    "item": "cockpit_military",
-    "location": "center",
-    "looks_like": "reclining_seat",
-    "name": { "str": "heavy cockpit" },
-	"size": "18750 ml",
-    "requirements": {
-      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": {
-        "skills": [ [ "mechanics", 3 ] ],
-        "time": "60 m",
-        "using": [ [ "repair_welding_standard", 1 ], [ "sewing_standard", 8 ] ]
-      }
-  },
-  {
-    "abstract": "cockpit_military_abstract",
-    "breaks_into": "ig_vp_cockpit_heavy",
-    "copy-from": "cockpit_military",
-    "item": "cockpit_military",
-    "looks_like": "seat",
-    "name": { "str": "military cockpit" },
-    "type": "vehicle_part"
-  },
+    {
+        "type": "GENERIC",
+        "id": "cockpit",
+        "name": { "str": "cockpit" },
+        "description": "A simple cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
+        "weight": "10500 g",
+        "to_hit": -4,
+        "color": "red",
+        "symbol": "0",
+        "material": [ "plastic", "cotton", "steel" ],
+        "volume": "8500 ml",
+        "bashing": 6,
+        "category": "veh_parts",
+        "price": 75000,
+        "price_postapoc": 300
+    },
+    {
+        "type": "GENERIC",
+        "copy-from": "cockpit",
+        "id": "cockpit_racing",
+        "name": { "str": "leather seat" },
+        "description": "A lightweight cockpit designed for speed with a leather interior. It features a number of quick-flip switches and pedals.",
+        "material": [ "leather", "plastic", "aluminum" ],
+        "weight": "5500 ml",
+        "price": 90000,
+        "price_postapoc": 450
+    },
+    {
+        "type": "GENERIC",
+        "copy-from": "cockpit",
+        "id": "cockpit_expmtl",
+        "name": { "str": "experimental cockpit" },
+        "description": "A mail order experimental cockpit for hobbiest roboticists.It would seem futuristic if not for the cheap plastic buttons and exposed wires everywhere.",
+        "material": [ "plastic", "leather", "aluminum" ],
+        "weight": "8000 g",
+        "price": 50000,
+        "price_postapoc": 200
+    },
+    {
+        "type": "GENERIC",
+        "copy-from": "cockpit",
+        "id": "cockpit_military",
+        "name": { "str": "leather seat" },
+        "description": "A heavy-duty cockpit designed for prototype combat mechs. It has intergrated cranks and panels for controling weaponry.",
+        "material": [ "kevlar", "ceramic", "hardsteel" ],
+        "weight": "7000 ml",
+        "price": 95000,
+        "price_postapoc": 550
+    },
+    {
+        "entries": [
+            {
+                "count": [ 1, 3 ],
+                "item": "cotton_patchwork"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "pipe"
+            },
+            {
+                "count": [ 0, 2 ],
+                "item": "spring"
+            },
+            {
+                "count": [ 3, 5 ],
+                "item": "scrap"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "e_scrap"
+            }
+        ],
+        "id": "ig_vp_cockpit",
+        "subtype": "collection",
+        "type": "item_group"
+    },
+    {
+        "entries": [
+            {
+                "count": [ 1, 5 ],
+                "item": "leather"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "cotton_patchwork"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "plastic_chunk"
+            },
+            {
+                "count": [ 0, 2 ],
+                "item": "spring"
+            },
+            {
+                "count": [ 3, 5 ],
+                "item": "scrap_aluminum"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "e_scrap"
+            }
+        ],
+        "id": "ig_vp_cockpit_light",
+        "subtype": "collection",
+        "type": "item_group"
+    },
+    {
+        "entries": [
+            {
+                "count": [ 1, 5 ],
+                "item": "steel_chunk"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "scrap_kevlar"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "pipe"
+            },
+            {
+                "count": [ 0, 2 ],
+                "item": "spring"
+            },
+            {
+                "count": [ 3, 5 ],
+                "item": "ceramic_shard"
+            },
+            {
+                "count": [ 1, 3 ],
+                "item": "e_scrap"
+            }
+        ],
+        "id": "ig_vp_cockpit_heavy",
+        "subtype": "collection",
+        "type": "item_group"
+    },
+    {
+        "abstract": "cockpit_abstract",
+        "breaks_into": "ig_vp_cockpit",
+        "broken_color": "red",
+        "broken_symbol": "*",
+        "categories": [ "operations", "passengers" ],
+        "color": "red",
+        "comfort": 2,
+        "damage_modifier": 60,
+        "damage_reduction": {
+            "all": 2,
+            "bash": 5
+        },
+        "description": "A simple cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
+        "durability": 300,
+        "flags": [ "SEAT", "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "WINDSHIELD" ],
+        "floor_bedding_warmth": 200,
+        "item": "cockpit",
+        "location": "center",
+        "size": "12500 ml",
+        "looks_like": "reclining_seat",
+        "name": { "str": "cockpit" },
+        "requirements": {
+            "install": {
+                "skills": [ [ "mechanics", 2 ] ],
+                "time": "60 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "removal": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "30 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "repair": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "60 m",
+                "using": [
+                    [ "repair_welding_standard", 1 ],
+                    [ "sewing_standard", 8 ]
+                ]
+            }
+        }
+    },
+    {
+        "abstract": "cockpit_light_abstract",
+        "breaks_into": "ig_vp_cockpit_light",
+        "broken_color": "red",
+        "broken_symbol": "*",
+        "categories": [ "operations", "passengers" ],
+        "color": "red",
+        "comfort": 3,
+        "damage_modifier": 60,
+        "damage_reduction": {
+            "all": 2,
+            "bash": 5
+        },
+        "description": "A light cockpit with twin sliding joysticks and an adjustable seat. It's filled with dials, buttons, and levers.",
+        "durability": 200,
+        "epower": -45,
+        "flags": [ "SEAT", "BED", "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "CTRL_ELECTRONIC", "DOME_LIGHT", "ENABLED_DRAINS_EPOWER", "WINDSHIELD" ],
+        "floor_bedding_warmth": 200,
+        "item": [
+            "cockpit_racing",
+            "cockpit_expmtl"
+        ],
+        "location": "center",
+        "looks_like": "reclining_seat",
+        "name": { "str": "light cockpit" },
+        "requirements": {
+            "install": {
+                "skills": [ [ "mechanics", 2 ] ],
+                "time": "60 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "removal": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "30 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "repair": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "60 m",
+                "using": [
+                    [ "repair_welding_standard", 1 ],
+                    [ "sewing_standard", 8 ]
+                ]
+            }
+        },
+        "size": "6250 ml"
+    },
+    {
+        "abstract": "cockpit_racing_abstract",
+        "breaks_into": "ig_vp_cockpit_light",
+        "copy-from": "cockpit_light",
+        "item": "cockpit_racing",
+        "looks_like": "seat",
+        "size": "5000 ml",
+        "name": { "str": "racing cockpit" },
+        "type": "vehicle_part"
+    },
+    {
+        "abstract": "cockpit_expmtl_abstract",
+        "breaks_into": "ig_vp_seat_leather",
+        "copy-from": "cockpit_light",
+        "item": "cockpit_expmtl",
+        "looks_like": "seat",
+        "name": { "str": "experimental cockpit" },
+        "type": "vehicle_part"
+    },
+    {
+        "abstract": "cockpit_heavy_abstract",
+        "breaks_into": "ig_vp_cockpit_heavy",
+        "broken_color": "red",
+        "broken_symbol": "*",
+        "categories": [ "operations", "passengers" ],
+        "color": "red",
+        "comfort": 2,
+        "damage_modifier": 60,
+        "damage_reduction": {
+            "all": 2,
+            "bash": 5
+        },
+        "description": "A heavy cockpit with twin sliding joysticks. It's filled with dials, buttons, and levers.",
+        "durability": 500,
+        "epower": -350,
+        "flags": [ "SEAT", "BOARDABLE", "CARGO", "BELTABLE", "ROOF", "CONTROLS", "DOME_LIGHT", "TURRET_CONTROLS", "ENABLED_DRAINS_EPOWER", "WINDSHIELD" ],
+        "floor_bedding_warmth": 200,
+        "item": "cockpit_military",
+        "location": "center",
+        "looks_like": "reclining_seat",
+        "name": { "str": "heavy cockpit" },
+        "size": "18750 ml",
+        "requirements": {
+            "install": {
+                "skills": [ [ "mechanics", 2 ] ],
+                "time": "60 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "removal": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "30 m",
+                "using": [ [ "vehicle_wrench_2", 1 ] ]
+            },
+            "repair": {
+                "skills": [ [ "mechanics", 3 ] ],
+                "time": "60 m",
+                "using": [
+                    [ "repair_welding_standard", 1 ],
+                    [ "sewing_standard", 8 ]
+                ]
+            }
+        }
+    },
+    {
+        "abstract": "cockpit_military_abstract",
+        "breaks_into": "ig_vp_cockpit_heavy",
+        "copy-from": "cockpit_military",
+        "item": "cockpit_military",
+        "looks_like": "seat",
+        "name": { "str": "military cockpit" },
+        "type": "vehicle_part"
+    }
 ]

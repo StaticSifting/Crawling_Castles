@@ -1,86 +1,183 @@
 [
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "cockpit_expmtl",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "mechanics",
-    "difficulty": 4,
-    "time": "3 h",
-    "book_learn": [ [ "manual_mecha_kit", 3 ], [ "mecha_prototype_cockpit", 3 ] ],
-    "reversible": true,
-    "using": [ [ "welding_standard", 5 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_welding_basic", "fail_multiplier": 1.5 },
-      { "proficiency": "prof_welding" },
-	  { "proficiency": "prof_elec_soldering" },
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level":1} ],
-    "components": [ [ [ "seat", 1 ] ], [ [ "adhesive", 6 ] ], [ [ "glass_sheet", 3 ] ], [ [ "controls", 1 ] ], [ [ "sheet_metal", 1 ] ], [ [ "xlframe", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "cockpit",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "mechanics",
-    "difficulty": 4,
-    "time": "3 h",
-    "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
-    "reversible": true,
-    "using": [ [ "welding_standard", 5 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_welding_basic", "fail_multiplier": 1.5 },
-      { "proficiency": "prof_welding" },
-	  { "proficiency": "prof_elec_soldering" },
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level":1} ],
-    "components": [ [ [ "seat", 1 ] ], [ [ "adhesive", 6 ] ], [ [ "glass_sheet", 3 ] ], [ [ "controls", 1 ] ], [ [ "sheet_metal", 1 ] ], [ [ "frame", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "cockpit_racing",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "mechanics",
-    "difficulty": 4,
-    "time": "3 h",
-    "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
-    "reversible": true,
-    "using": [ [ "welding_standard", 5 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_welding_basic", "fail_multiplier": 1.5 },
-      { "proficiency": "prof_welding" },
-	  { "proficiency": "prof_elec_soldering" },
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level":1} ],
-    "components": [ [ [ "seat", 1 ] ], [ [ "adhesive", 6 ] ], [ [ "glass_sheet", 3 ] ], [ [ "controls_electronics", 1 ] ], [ [ "controls", 1 ] ], [ [ "sheet_metal", 1 ] ], [ [ "xlframe", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "cockpit_military",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "mechanics",
-    "difficulty": 4,
-    "time": "3 h",
-    "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
-    "reversible": true,
-    "using": [ [ "welding_standard", 5 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_welding_basic", "fail_multiplier": 1.5 },
-      { "proficiency": "prof_welding" },
-	  { "proficiency": "prof_elec_soldering" },
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 3 }, { "id": "SAW_M", "level": 2 }, { "id": "SCREW", "level":1} ],
-    "components": [ [ [ "seat", 1 ] ], [ [ "adhesive", 6 ] ], [ [ "glass_sheet", 3 ] ], [ [ "controls_turret", 1 ] ], [ [ "controls", 1 ] ], [ [ "sheet_metal", 1 ] ], [ [ "hdframe", 1 ] ] ]
-  }
+    {
+        "type": "recipe",
+        "activity_level": "MODERATE_EXERCISE",
+        "result": "cockpit_expmtl",
+        "category": "CC_OTHER",
+        "subcategory": "CSC_OTHER_PARTS",
+        "skill_used": "mechanics",
+        "difficulty": 4,
+        "time": "3 h",
+        "book_learn": [
+            [ "manual_mecha_kit", 3 ],
+            [ "mecha_prototype_cockpit", 3 ]
+        ],
+        "reversible": true,
+        "using": [ [ "welding_standard", 5 ] ],
+        "proficiencies": [
+            { "proficiency": "prof_metalworking" },
+            {
+                "proficiency": "prof_welding_basic",
+                "fail_multiplier": 1.5
+            },
+            { "proficiency": "prof_welding" },
+            { "proficiency": "prof_elec_soldering" }
+        ],
+        "qualities": [
+            {
+                "id": "HAMMER",
+                "level": 2
+            },
+            {
+                "id": "SAW_M",
+                "level": 1
+            },
+            {
+                "id": "SCREW",
+                "level": 1
+            }
+        ],
+        "components": [
+            [ [ "seat", 1 ] ],
+            [ [ "adhesive", 6 ] ],
+            [ [ "glass_sheet", 3 ] ],
+            [ [ "controls", 1 ] ],
+            [ [ "sheet_metal", 1 ] ],
+            [ [ "xlframe", 1 ] ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "MODERATE_EXERCISE",
+        "result": "cockpit",
+        "category": "CC_OTHER",
+        "subcategory": "CSC_OTHER_PARTS",
+        "skill_used": "mechanics",
+        "difficulty": 4,
+        "time": "3 h",
+        "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
+        "reversible": true,
+        "using": [ [ "welding_standard", 5 ] ],
+        "proficiencies": [
+            { "proficiency": "prof_metalworking" },
+            {
+                "proficiency": "prof_welding_basic",
+                "fail_multiplier": 1.5
+            },
+            { "proficiency": "prof_welding" },
+            { "proficiency": "prof_elec_soldering" }
+        ],
+        "qualities": [
+            {
+                "id": "HAMMER",
+                "level": 2
+            },
+            {
+                "id": "SAW_M",
+                "level": 1
+            },
+            {
+                "id": "SCREW",
+                "level": 1
+            }
+        ],
+        "components": [
+            [ [ "seat", 1 ] ],
+            [ [ "adhesive", 6 ] ],
+            [ [ "glass_sheet", 3 ] ],
+            [ [ "controls", 1 ] ],
+            [ [ "sheet_metal", 1 ] ],
+            [ [ "frame", 1 ] ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "MODERATE_EXERCISE",
+        "result": "cockpit_racing",
+        "category": "CC_OTHER",
+        "subcategory": "CSC_OTHER_PARTS",
+        "skill_used": "mechanics",
+        "difficulty": 4,
+        "time": "3 h",
+        "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
+        "reversible": true,
+        "using": [ [ "welding_standard", 5 ] ],
+        "proficiencies": [
+            { "proficiency": "prof_metalworking" },
+            {
+                "proficiency": "prof_welding_basic",
+                "fail_multiplier": 1.5
+            },
+            { "proficiency": "prof_welding" },
+            { "proficiency": "prof_elec_soldering" }
+        ],
+        "qualities": [
+            {
+                "id": "HAMMER",
+                "level": 2
+            },
+            {
+                "id": "SAW_M",
+                "level": 1
+            },
+            {
+                "id": "SCREW",
+                "level": 1
+            }
+        ],
+        "components": [
+            [ [ "seat", 1 ] ],
+            [ [ "adhesive", 6 ] ],
+            [ [ "glass_sheet", 3 ] ],
+            [ [ "controls_electronics", 1 ] ],
+            [ [ "controls", 1 ] ],
+            [ [ "sheet_metal", 1 ] ],
+            [ [ "xlframe", 1 ] ]
+        ]
+    },
+    {
+        "activity_level": "MODERATE_EXERCISE",
+        "book_learn": [ [ "mecha_prototype_cockpit", 3 ] ],
+        "category": "CC_OTHER",
+        "components": [
+            [ [ "seat", 1 ] ],
+            [ [ "adhesive", 6 ] ],
+            [ [ "glass_sheet", 3 ] ],
+            [ [ "controls_turret", 1 ] ],
+            [ [ "controls", 1 ] ],
+            [ [ "sheet_metal", 1 ] ],
+            [ [ "hdframe", 1 ] ]
+        ],
+        "difficulty": 4,
+        "proficiencies": [
+            { "proficiency": "prof_metalworking" },
+            {
+                "proficiency": "prof_welding_basic",
+                "fail_multiplier": 1.5
+            },
+            { "proficiency": "prof_welding" },
+            { "proficiency": "prof_elec_soldering" }
+        ],
+        "qualities": [
+            {
+                "id": "HAMMER",
+                "level": 3
+            },
+            {
+                "id": "SAW_M",
+                "level": 2
+            },
+            {
+                "id": "SCREW",
+                "level": 1
+            }
+        ],
+        "result": "cockpit_military",
+        "reversible": true,
+        "skill_used": "mechanics",
+        "subcategory": "CSC_OTHER_PARTS",
+        "time": "3 h",
+        "type": "recipe",
+        "using": [ [ "welding_standard", 5 ] ]
+    }
 ]
