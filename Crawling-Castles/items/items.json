@@ -36,7 +36,7 @@
             }
         ],
         "chapters": 13,
-        "fun": "+1"
+        "fun": 1
     },
     {
         "id": "mecha_prototype_cockpit",
@@ -87,7 +87,7 @@
         "max_level": 4,
         "intelligence": 10,
         "time": "35 m",
-        "fun": "+1",
+        "fun": 1,
         "flags": [ "TRADER_AVOID" ]
     }
 ]

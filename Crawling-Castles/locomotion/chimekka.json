@@ -1,7 +1,7 @@
 [
     {
         "id": "leg_chimekka_t1",
-        "type": "GENERIC",
+        "type": "WHEEL",
         "category": "veh_parts",
         "looks_like": "wheel_motorbike",
         "name": { "str": "chimekka type 1 leg" },
@@ -16,19 +16,19 @@
         "material": [ "aluminum" ],
         "flags": [ "NONCONDUCTIVE" ],
         "symbol": "]",
-        "color": "dark_gray"
+        "color": "gray"
     },
     {
         "abstract": "leg_chimekka_t1_abstract",
         "type": "vehicle_part",
-        "name": { "str": "motorbike wheel" },
+        "name": { "str": "chimekka type 1 leg" },
         "item": "leg_chimekka_t1",
         "location": "under",
         "looks_like": "wheel",
         "symbol": "o",
         "broken_symbol": "x",
         "categories": [ "movement" ],
-        "color": "dark_gray",
+        "color": "gray",
         "durability": 50,
         "description": "A lightweight chimekka leg made for offroad racing, it resembles an emus leg",
         "damage_modifier": 50,
