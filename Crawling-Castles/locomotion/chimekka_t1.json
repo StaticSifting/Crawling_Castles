@@ -5,7 +5,7 @@
         "category": "veh_parts",
         "looks_like": "wheel_motorbike",
         "name": { "str": "chimekka type 1 leg" },
-        "description": "A lightweight chimekka leg made for offroad racing, it resembles an emus leg",
+        "description": "A lightweight chimekka leg made for offroad travel that resembles an emus leg.  Plated in sleek white fiberglass with gaps showing off shiney crome pieces underneath, this chimekka leg is painted with the signiture green, red, and yellow zebra stripes.  An ice blue light up logo for 'Titanica Mechanica' flickers on when the leg is in motion.",
         "weight": "1814 g",
         "volume": "8250 ml",
         "longest_side": "609 mm",
@@ -16,7 +16,9 @@
         "material": [ "aluminum" ],
         "flags": [ "NONCONDUCTIVE" ],
         "symbol": "]",
-        "color": "gray"
+        "color": "gray",
+        "diameter": 27,
+        "width": 3
     },
     {
         "abstract": "leg_chimekka_t1_abstract",
@@ -30,7 +32,7 @@
         "categories": [ "movement" ],
         "color": "gray",
         "durability": 50,
-        "description": "A lightweight chimekka leg made for offroad racing, it resembles an emus leg",
+        "description": "A lightweight chimekka leg made for offroad travel that resembles an emus leg.  Plated in sleek white fiberglass with gaps showing off shiney crome pieces underneath, this chimekka leg is painted with the signiture green, red, and yellow zebra stripes.  An ice blue light up logo for 'Titanica Mechanica' flickers on when the leg is in motion.",
         "damage_modifier": 50,
         "qualities": [ [ "SELF_JACK", 1 ] ],
         "breaks_into": [
@@ -65,8 +67,8 @@
                 "skills": [ [ "mechanics", 2 ] ],
                 "time": "15 m",
                 "using": [
-                    [ "adhesive_rubber", 1 ],
-                    [ "tire_rubber", 1 ]
+                    [ "spring", 1 ],
+                    [ "pipe", 1 ]
                 ]
             }
         },
@@ -82,12 +84,12 @@
         "copy-from": "leg_chimekka_t1_abstract",
         "type": "vehicle_part",
         "name": { "str": "chimekka leading leg" },
-        "description": "Leading chimekka leg, this one always steps first",
+        "description": "Leading chimekka leg, this one always steps first for smooth control and steering. A lightweight chimekka leg made for offroad travel that resembles an emus leg.  Plated in sleek white fiberglass with gaps showing off shiney crome pieces underneath, this chimekka leg is painted with the signiture green, red, and yellow zebra stripes.  An ice blue light up logo for 'Titanica Mechanica' flickers on when the leg is in motion.",
         "extend": { "flags": [ "STEERABLE" ] }
     },
     {
         "copy-from": "leg_chimekka_t1_abstract",
-        "description": "Trailing chimekka leg, this one always steps second",
+        "description": "Trailing chimekka leg, this one always follows up on a leading legs step. A lightweight chimekka leg made for offroad travel that resembles an emus leg.  Plated in sleek white fiberglass with gaps showing off shiney crome pieces underneath, this chimekka leg is painted with the signiture green, red, and yellow zebra stripes.  An ice blue light up logo for 'Titanica Mechanica' flickers on when the leg is in motion.",
         "id": "chimekka_t1_trail",
         "name": { "str": "chimekka trailing leg" },
         "type": "vehicle_part"
@@ -127,4 +129,5 @@
             [ [ "scrap", 5 ] ]
         ]
     }
+
 ]

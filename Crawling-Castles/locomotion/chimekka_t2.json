@@ -1,0 +1,94 @@
+[
+    {
+        "id": "wheel_slick",
+        "type": "WHEEL",
+        "category": "veh_parts",
+        "name": { "str": "racing wheel" },
+        "description": "A wide, smooth wheel intended for racing.  The slick surface provides better speed on pavement but penalizes off-road speed.",
+        "weight": "12600 g",
+        "volume": "28 L",
+        "longest_side": "407 mm",
+        "price": 24000,
+        "price_postapoc": 500,
+        "bashing": 14,
+        "to_hit": -1,
+        "material": [ "steel", "rubber" ],
+        "symbol": "]",
+        "color": "dark_gray",
+        "diameter": 16,
+        "width": 11
+    },
+    {
+        "id": "wheel_slick",
+        "copy-from": "wheel",
+        "type": "vehicle_part",
+        "name": { "str": "racing slick" },
+        "item": "wheel_slick",
+        "wheel_type": "racing",
+        "contact_area": 180,
+        "damage_reduction": { "bash": 12 }
+    },
+    {
+        "id": "wheel_slick",
+        "copy-from": "wheel",
+        "type": "vehicle_part",
+        "name": { "str": "racing slick" },
+        "item": "wheel_slick",
+        "wheel_type": "racing",
+        "contact_area": 180,
+        "damage_reduction": { "bash": 12 }
+    },
+    {
+        "id": "wheel",
+        "type": "vehicle_part",
+        "name": { "str": "wheel" },
+        "item": "wheel",
+        "location": "under",
+        "symbol": "0",
+        "broken_symbol": "x",
+        "categories": [ "movement" ],
+        "color": "dark_gray",
+        "durability": 200,
+        "description": "A wheel.",
+        "damage_modifier": 50,
+        "breaks_into": [
+            {
+                "item": "steel_lump",
+                "count": [ 1, 2 ]
+            },
+            {
+                "item": "steel_chunk",
+                "count": [ 1, 2 ]
+            },
+            {
+                "item": "scrap",
+                "count": [ 1, 2 ]
+            }
+        ],
+        "rolling_resistance": 1.0,
+        "wheel_type": "standard",
+        "contact_area": 153,
+        "requirements": {
+            "install": {
+                "skills": [ [ "mechanics", 0 ] ],
+                "time": "15 m",
+                "using": [ [ "vehicle_fasten", 1 ] ]
+            },
+            "removal": {
+                "skills": [ [ "mechanics", 0 ] ],
+                "time": "15 m",
+                "using": [ [ "vehicle_fasten", 1 ] ]
+            },
+            "repair": {
+                "skills": [ [ "mechanics", 4 ] ],
+                "time": "15 m",
+                "using": [
+                    [ "adhesive_rubber", 1 ],
+                    [ "tire_rubber", 1 ]
+                ]
+            }
+        },
+        "flags": [ "WHEEL", "UNSTABLE_WHEEL", "NEEDS_JACKING", "NEEDS_WHEEL_MOUNT_MEDIUM" ],
+        "damage_reduction": { "bash": 20 }
+    }
+]
